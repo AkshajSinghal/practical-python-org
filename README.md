@@ -1,2 +1,3 @@
 # practical-python-org
-Home page for https://www.practicalpython.org
+Home page for [PracticalPython.org](https://www.practicalpython.org)
+> Currently in Developement

@@ -3,9 +3,16 @@
     <head>
         <title>Practical Python</title>
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <style>
+            /* Hide all cards by default, show the 'active' one */
+            .testimonial-card { display: all; }
+            .testimonial-card.active { display: block; }
+        </style>
     </head>
     <body>
         <div class="bg-emerald-100 min-h-screen">
+
+            <!-- HEADER -->
             <div class="bg-emerald-500 px-6 py-4 flex justify-between">
                 <h1 class="font-bold text-white text-xl"><a href="#">Practical Python</a></h1>
                 <nav class="text-emerald-100 flex gap-3">
@@ -15,7 +22,67 @@
                 </nav>
             </div>
             
-            <div>Core</div>
+            <!-- CORE -->
+            <div>
+                <!-- Hero Section -->
+                <div>
+                    <h1>Welcome to PracticalPython!</h1>
+                    <p>A Python Programming Community, build by Ops, for developers</p>
+                </div>
+
+                <!-- Sliding Testimonials Section -->
+                <div class="max-w-4xl mx-auto px-6 py-10">
+                    <h2 class="text-2xl font-bold text-emerald-900 mb-6 text-center">What our community says</h2>
+
+                    <div id="slider-container" class="relative">
+
+                        <!-- Card 1 (Active by default) -->
+                        <div class="testimonial-card active bg-white rounded-xl shadow-xl overflow-hidden animate-fade-in">
+                            <div class="md:flex">
+                                <div class="md:shrink-0">
+                                    <!-- You can use <video autoplay muted loop> here instead of <img> -->
+                                    <img class="h-48 w-full object-cover md:h-full md:w-48" src="https://images.unsplash.com" alt="Student coding">
+                                </div>
+                                <div class="p-8">
+                                    <div class="uppercase tracking-wide text-sm text-emerald-500 font-semibold">Student Review</div>
+                                    <p class="mt-2 text-gray-600 italic">"Practical Python helped me automate my daily cloud ops tasks in just two weeks!"</p>
+                                    <p class="mt-4 font-bold text-gray-900">- Alex Johnson</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="testimonial-card bg-white rounded-xl shadow-xl overflow-hidden">
+                            <div class="md:flex">
+                                <div class="md:shrink-0 text-center bg-emerald-900 flex items-center justify-center w-48 h-48 md:h-full">
+                                <span class="text-white font-bold text-xs p-2 text-center">[Video Placeholder]</span>
+                                </div>
+                                <div class="p-8">
+                                    <div class="uppercase tracking-wide text-sm text-emerald-500 font-semibold">DevOps Insight</div>
+                                    <p class="mt-2 text-gray-600 italic">"The transition from Bash to Python was seamless thanks to the structured roadmap here."</p>
+                                    <p class="mt-4 font-bold text-gray-900">- Sarah Chen</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="testimonial-card bg-white rounded-xl shadow-xl overflow-hidden">
+                            <div class="md:flex">
+                                <div class="md:shrink-0">
+                                    <img class="h-48 w-full object-cover md:h-full md:w-48" src="https://images.unsplash.com" alt="Python logo">
+                                </div>
+                                <div class="p-8">
+                                    <div class="uppercase tracking-wide text-sm text-emerald-500 font-semibold">Community Member</div>
+                                    <p class="mt-2 text-gray-600 italic">"The 'Adventure' section is a game changer for learning logic through play."</p>
+                                    <p class="mt-4 font-bold text-gray-900">- Mike Ross</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
             <div>Footer</div>
         </div>
         

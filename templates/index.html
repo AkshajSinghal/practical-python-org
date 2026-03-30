@@ -24,55 +24,33 @@
                 </div>
             </div>            
 
-            <!-- CORE -->
+            <!-- HERO -->
             <div class="relative max-w-5xl mx-auto px-10 py-20">
-                
-                <!-- Hero Section --> 
-                <div>
-                    <div class="p-6 pb-0"> 
-                        <h1 class="text-2xl font-bold text-cyan-900 mb-6 text-center">Welcome to Practical Python!</h1> 
-                        <p class="text-xl font-semibold text-cyan-800 mb-6 text-center">
-                            We are a friendly and inclusive Discord server dedicated to learning and practicing the Python programming language!
-
-                            Our server is a community-driven platform where programmers of all skill levels come together to help each other grow and develop their Python skills.
-                            At Practical Python, we believe in creating a supportive and welcoming environment for everyone.
-
-                            Whether you're a complete beginner or an experienced coder, you'll find a place to fit in and connect with like-minded individuals. Our knowledgeable and passionate community members are always ready to lend a helping hand and answer any questions you may have.
-                        </p> 
-                    </div>
-                    <div>
-                        
-                    </div>
-                </div>
-                
-                <!-- Outer Box -->
-                <div class="overflow-hidden rounded-3xl shadow-2xl bg-white/10 backdrop-blur-sm p-4">
+                            
+                <div class="mx-auto px-6 py-12">
                     
-                    <!-- The Track -->
-                    <div id="slider-track" class="flex transition-transform duration-500 ease-in-out gap-8" style="transform: translateX(0px);">
-                        
-                        <!-- Card 1 -->
-                        <div class="min-w-full flex-shrink-0 bg-white p-8 rounded-2xl border-2 border-sky-300">
-                            <span class="text-xs font-bold text-sky-500 uppercase tracking-widest">Student Review</span>
-                            <p class="text-2xl italic my-4">"Practical Python helped me automate my daily cloud ops tasks!"</p>
-                            <p class="font-bold text-sky-900">- Alex Johnson</p>
+                    <br><br><h1 class="text-2xl text-center pt-10">Who are we?</h1>
+                    <div class="flex flex-col md:flex-row items-center justify-between gap-12">
+    
+                        <div class="md:w-3/5 pl-6"> 
+                            <p class="text-xl font-medium text-cyan-800 leading-relaxed">
+                                We are a friendly and inclusive Discord server dedicated to learning and practicing the Python programming language!
+                                <br><br>
+                                Our server is a community-driven platform where programmers of all skill levels come together to help each other grow. 
+                                Whether you're a complete beginner or an experienced coder, you'll find a place to fit in.
+                            </p> 
                         </div>
 
-                        <!-- Card 2 -->
-                        <div class="min-w-full flex-shrink-0 bg-white p-8 rounded-2xl border-2 border-sky-300">
-                            <span class="text-xs font-bold text-sky-500 uppercase tracking-widest">DevOps Insight</span>
-                            <p class="text-2xl italic my-4">"The transition from Bash to Python was seamless thanks to this roadmap."</p>
-                            <p class="font-bold text-sky-900">- Sarah Chen</p>
-                        </div>
-
-                        <!-- Card 3 -->
-                        <div class="min-w-full flex-shrink-0 bg-white p-8 rounded-2xl border-2 border-sky-300">
-                            <span class="text-xs font-bold text-sky-500 uppercase tracking-widest">Community</span>
-                            <p class="text-2xl italic my-4">"The 'Adventure' section is a game changer for learning logic."</p>
-                            <p class="font-bold text-sky-900">- Mike Ross</p>
+                        <div class="md:w-1/3">
+                            <img src="{{ url_for('static', filename='images/person-thinking.png') }}" 
+                                alt="Person Thinking" 
+                                class="w-full max-w-xs mx-auto object-contain">
                         </div>
                     </div>
-                </div>
+
+                    <div class="overflow-hidden rounded-3xl shadow-2xl bg-white/30 backdrop-blur-sm p-6">
+                        </div>
+                </div>    
             </div>
 
 

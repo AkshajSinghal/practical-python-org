@@ -1,77 +1,86 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Practical Python</title>
-        
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/output.css') }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical Python</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/output.css') }}">
+</head>
+<body>
+    <div class="bg-sky-200 min-h-screen">
 
-    </head>
-    <body>
-        <div class="bg-sky-200 min-h-screen">
+        <!-- HEADER -->
+        <div class="p-2">
+            <div class="bg-sky-300 px-6 py-4 flex justify-between shadow-lg rounded-xl">
+                <h1 class="font-bold text-black text-xl">
+                    <a href="#">Practical Python</a>
+                </h1>
+                <nav class="text-white flex gap-3">
+                    <a href="#">Home</a>
+                    <a href="/signup">SignUp</a>
+                    <a href="https://discord.gg/R4FcXJk7S8">Discord</a>
+                    <a href="https://adventure.practicalpython.org/">Adventure</a>
+                </nav>
+            </div>
+        </div>            
 
-            <!-- HEADER -->
-            <div class="p-2">
-                <div class="bg-sky-300 px-6 py-4 flex justify-between shadow-lg rounded-xl">
-                    <h1 class="font-bold text-black text-xl"><a href="#">Practical Python</a></h1>
-                    <nav class="text-white flex gap-3">
-                        <a href="#">Home</a>
-                        <a href="/signup">SignUp</a>
-                        <a href="https://discord.gg/R4FcXJk7S8">Discord</a>
-                        <a href="https://adventure.practicalpython.org/">Adventure</a>
-                    </nav>
-                </div>
-            </div>            
-
-            <!-- HERO -->
-            <div class="relative max-w-5xl mx-auto px-10 py-20">
-                            
-                <div class="mx-auto px-6 py-12">
-                    
-                    <br><br><h1 class="text-2xl text-center pt-10">Who are we?</h1>
-                    <div class="flex flex-col md:flex-row items-center justify-between gap-12">
-    
-                        <div class="md:w-3/5 pl-6"> 
-                            <p class="text-xl font-medium text-cyan-800 leading-relaxed">
-                                We are a friendly and inclusive Discord server dedicated to learning and practicing the Python programming language!
-                                <br><br>
-                                Our server is a community-driven platform where programmers of all skill levels come together to help each other grow. 
-                                Whether you're a complete beginner or an experienced coder, you'll find a place to fit in.
-                            </p> 
-                        </div>
-
-                        <div class="md:w-1/3">
-                            <img src="{{ url_for('static', filename='images/person-thinking.png') }}" 
-                                alt="Person Thinking" 
-                                class="w-full max-w-xs mx-auto object-contain">
-                        </div>
+        <!-- HERO -->
+        <div class="relative max-w-5xl mx-auto px-10 py-20">
+            <div class="mx-auto px-6 py-12">
+                <h1 class="text-2xl text-center pt-10 mb-12">Who are we?</h1>
+                
+                <div class="flex flex-col md:flex-row items-center justify-between gap-12">
+                    <div class="md:w-3/5 pl-6"> 
+                        <p class="text-xl font-medium text-cyan-800 leading-relaxed">
+                            We are a friendly and inclusive Discord server dedicated to learning and practicing the Python programming language!
+                            <br><br>
+                            Our server is a community-driven platform where programmers of all skill levels come together to help each other grow. 
+                            Whether you're a complete beginner or an experienced coder, you'll find a place to fit in.
+                        </p> 
                     </div>
 
-                    <div class="overflow-hidden rounded-3xl shadow-2xl bg-white/30 backdrop-blur-sm p-6">
-                        </div>
-                </div>    
-            </div>
-
-            <!--Cards-->
-            <div>
-                <a href="#">
-                    <img src="static/images/card1" alt="Description of the image">
-                </a>
-                <a href="#">
-                    <img src="static/images/card1" alt="Description of the image">
-                </a>
-            </div>
-
-            <!-- Footer -->
-            <div class="bg-sky-300 px-6 py-4 pt-10 shadow-lg">
-                <h1 class="text-black text-xl text-center">PracticalPython.org</h1>
-                <div class="flex items-center">
-                    <!--Add github, and discord links here-->
+                    <div class="md:w-1/3">
+                        <img src="{{ url_for('static', filename='images/person-thinking.png') }}" 
+                             alt="Person Thinking" 
+                             class="w-full max-w-xs mx-auto object-contain">
+                    </div>
                 </div>
+            </div>    
+        </div>
+
+        <!-- CARDS SECTION - FIXED -->
+        <div class="max-w-5xl mx-auto px-10 pb-20">
+            <div class="flex flex-col md:flex-row justify-center items-center gap-8">
+                
+                <!-- Card 1: Adventure -->
+                <a href="https://adventure.practicalpython.org/" 
+                   class="group block w-full max-w-sm overflow-hidden rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                    <img src="{{ url_for('static', filename='images/adventure-poster.png') }}" 
+                         alt="Adventure Poster" 
+                         class="w-full h-auto object-cover">
+                </a>
+
+                <!-- Card 2: Discord -->
+                <a href="https://discord.gg/R4FcXJk7S8" 
+                   class="group block w-full max-w-sm overflow-hidden rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                    <img src="{{ url_for('static', filename='images/server-poster.png') }}" 
+                         alt="Discord Poster" 
+                         class="w-full h-auto object-cover">
+                </a>
+
             </div>
-            
+        </div>
+
+        <!-- Footer -->
+        <div class="bg-sky-300 px-6 py-10 shadow-lg">
+            <h1 class="text-black text-xl text-center font-medium">PracticalPython.org</h1>
+            <div class="flex items-center justify-center gap-6 mt-6">
+                <!-- Add your GitHub and Discord links here -->
+                <a href="https://discord.gg/R4FcXJk7S8" class="text-black hover:text-sky-700">Discord</a>
+                <!-- <a href="#" class="text-black hover:text-sky-700">GitHub</a> -->
+            </div>
         </div>
         
-    </body>
+    </div>
+</body>
 </html>
